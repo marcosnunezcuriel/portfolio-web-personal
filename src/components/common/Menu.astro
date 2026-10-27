@@ -1,0 +1,66 @@
+---
+
+---
+
+<nav class="menu">
+    <img src="src/assets/logo-mnc.png" alt="logo-mnc" class="logo" />
+
+    <ul class="sections">
+        <li><a href="#about-me" class="active">Sobre mí</a></li>
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#certifications">Certificaciones</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#education">Educación</a></li>
+        <li><a href="#contact">Contacto</a></li>
+    </ul>
+</nav>
+
+<style>
+
+    .menu {
+        position: sticky;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 10%;
+        background-color: var(--dark-bg);
+    }
+
+    .logo {
+        height: 45px;
+    }
+
+    .sections {
+        display: flex;
+        gap: 3rem;
+        list-style: none;
+    }
+
+    .sections a {
+        text-decoration: none;
+        color: var(--white-text);
+        font-family: var(--font-inter);
+        font-size: 1rem;
+        font-weight: 300;
+        letter-spacing: 0.3px;
+        padding-bottom: 4px;
+        border-bottom: 2px solid transparent;
+        transition: color 0.25s ease-in-out;
+    }
+
+    .sections a:hover {
+        color: var(--color-yellow);
+        border-bottom: 2px solid var(--color-yellow);
+    }
+
+    .sections a.active {
+        border-bottom: 2px solid var(--white-text);
+    }
+
+    .sections a.active:hover {
+        border-bottom: 2px solid var(--color-yellow);
+    }
+
+</style>
