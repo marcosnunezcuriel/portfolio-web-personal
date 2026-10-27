@@ -1,5 +1,10 @@
 ---
-
+import { getRootColourVariables } from '../utils/colours.js';
+import { getRootFontVariables } from '../utils/fonts.js';
+const rootVars = {
+  ...getRootColourVariables(),
+  ...getRootFontVariables()
+};
 ---
 
 <!doctype html>
@@ -17,6 +22,10 @@
 	</body>
 </html>
 
-<style>
-	
+<style is:global define:vars={rootVars}>
+	body {
+		background-color: var(--normal-bg);
+		color: var(--white-text);
+		margin: 0;
+  	}
 </style>
