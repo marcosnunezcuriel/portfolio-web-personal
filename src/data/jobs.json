@@ -1,0 +1,42 @@
+[
+  {
+    "id": "practicas-daw",
+    "role": "Prácticas formativas 1º DAW",
+    "company": "Soltel Group",
+    "date": "05/2026",
+    "description": "Durante el periodo de prácticas, adquirí experiencia en arquitectura monolítica y de microservicios, desarrollo web full-stack utilizando Angular en frontend y Spring-boot en backend, además de pruebas de APIs con Postman y conexión a bases de datos. Asimismo, trabajé con contenerización de aplicaciones mediante Docker y Portainer, desarrollo móvil multiplataforma con Flutter/Dart y control de versiones con Git, Git Bash y Github.",
+    "color": "red"
+  },
+  {
+    "id": "operario-lavadero",
+    "role": "Operario de lavadero de coches",
+    "company": "EasyWash",
+    "date": "09/2026 - Actualmente",
+    "description": "Responsable de la atención directa a los usuarios, la gestión de cobros y caja, el mantenimiento técnico básico de los equipos de lavado y el cuidado integral de las instalaciones para garantizar el correcto funcionamiento del centro.",
+    "color": "yellow"
+  },
+  {
+    "id": "operario-fabrica-almacen",
+    "role": "Operario de fábrica / Auxiliar de línea / Mozo de Almacén",
+    "company": "Randstad",
+    "date": "06/2026 - Actualmente",
+    "description": "Cuento con experiencia en logística, gestión de almacén y líneas de producción en entornos industriales de alta rotación. He prestado servicios en empresas referentes de diversos sectores, como el alimentario en Hermanos Fernández López y Sadrym, el de electrodomésticos en Cointer, el químico en Persán, la paquetería express en MRW y el farmacéutico en Becton Dickinson. Mis funciones han abarcado la carga, descarga y manipulación de mercancías y materias primas, así como la ubicación y clasificación de stock en estanterías. También me he ocupado de la preparación de expediciones mediante repaletizado, flejado, empaquetado y estabilización de cargas para garantizar un transporte seguro. En la línea de producción, he trabajado en el montaje, ensamblaje y acondicionamiento de estructuras y pedidos según las especificaciones del cliente, realizando un control de calidad visual del producto y manteniendo de forma rigurosa los estándares de higiene, seguridad y orden en la zona de trabajo.",
+    "color": "blue"
+  },
+  {
+    "id": "bodeguero",
+    "role": "Bodeguero",
+    "company": "Excelentísimo Ateneo de Sevilla",
+    "date": "Campañas de Navidad 2025 y 2026",
+    "description": "Responsable de la recepción, custodia y organización de la mercancía en la bodega interior de una carroza, el despacho fluido y coordinado de los productos durante el recorrido y el control del stock para garantizar el correcto aprovisionamiento y la seguridad de la carga durante el evento de la Cabalgata de Reyes.",
+    "color": "red"
+  },
+  {
+    "id": "profesor-particular",
+    "role": "Profesor particular",
+    "company": "Servicios educativos independientes",
+    "date": "2022 - 2025",
+    "description": "Responsable de la impartición de clases particulares de apoyo académico en Matemáticas, Inglés y Física a estudiantes de Educación Secundaria Obligatoria, con un enfoque personalizado en grupos reducidos de uno a tres alumnos para el refuerzo conceptual, la preparación de exámenes y el seguimiento del rendimiento escolar.",
+    "color": "green"
+  }
+]

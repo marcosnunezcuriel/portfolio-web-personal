@@ -1,0 +1,135 @@
+[
+  {
+    "category": "Lenguajes de programación y marcado",
+    "skills": [
+      {
+        "id": "java",
+        "name": "Java",
+        "icon": "/src/assests/skills/icono-java.png",
+        "color": "blue"
+      },
+      {
+        "id": "html5",
+        "name": "HTML5",
+        "icon": "/src/assests/skills/icono-html5.png",
+        "color": "red"
+      },
+      {
+        "id": "css3",
+        "name": "CSS3",
+        "icon": "/src/assests/skills/icono-css3.png",
+        "color": "blue"
+      },
+      {
+        "id": "javascript",
+        "name": "JavaScript",
+        "icon": "/src/assests/skills/icono-javascript.png",
+        "color": "yellow"
+      },
+      {
+        "id": "typescript",
+        "name": "TypeScript",
+        "icon": "/src/assests/skills/icono-typescript.png",
+        "color": "blue"
+      },
+      {
+        "id": "sql",
+        "name": "SQL",
+        "icon": "/src/assests/skills/icono-sql.png",
+        "color": "green"
+      }
+    ]
+  },
+  {
+    "category": "Frameworks",
+    "skills": [
+      {
+        "id": "springboot",
+        "name": "SpringBoot",
+        "icon": "/src/assests/skills/icono-springboot.png",
+        "color": "green"
+      },
+      {
+        "id": "angular",
+        "name": "Angular",
+        "icon": "/src/assests/skills/icono-angular.png",
+        "color": "red"
+      },
+      {
+        "id": "react",
+        "name": "React",
+        "icon": "/src/assests/skills/icono-react.png",
+        "color": "blue"
+      },
+      {
+        "id": "astro",
+        "name": "Astro",
+        "icon": "/src/assests/skills/icono-astro.png",
+        "color": "yellow"
+      }
+    ]
+  },
+  {
+    "category": "Bases de datos",
+    "skills": [
+      {
+        "id": "mysql",
+        "name": "MySQL",
+        "icon": "/src/assests/skills/icono-mysql.png",
+        "color": "blue"
+      }
+    ]
+  },
+  {
+    "category": "Diseño & Prototipado",
+    "skills": [
+      {
+        "id": "figma",
+        "name": "Figma",
+        "icon": "/src/assests/skills/icono-figma.png",
+        "color": "green"
+      }
+    ]
+  },
+  {
+    "category": "Herramientas & IDEs",
+    "skills": [
+      {
+        "id": "git",
+        "name": "Git",
+        "icon": "/src/assests/skills/icono-git.png",
+        "color": "red"
+      },
+      {
+        "id": "github",
+        "name": "GitHub",
+        "icon": "/src/assests/skills/icono-github.png",
+        "color": "yellow"
+      },
+      {
+        "id": "git-bash",
+        "name": "Git Bash",
+        "icon": "/src/assests/skills/icono-git-bash.png",
+        "color": "green"
+      },
+      {
+        "id": "intellij-idea",
+        "name": "IntelliJ IDEA",
+        "icon": "/src/assests/skills/icono-intellij-idea.png",
+        "color": "yellow"
+      },
+      {
+        "id": "eclipse",
+        "name": "Eclipse",
+        "icon": "/src/assests/skills/icono-eclipse.png",
+        "color": "red"
+      },
+      {
+        "id": "vs-code",
+        "name": "VS Code",
+        "icon": "/src/assests/skills/icono-vs-code.png",
+        "color": "blue"
+      }
+    ]
+  }
+]

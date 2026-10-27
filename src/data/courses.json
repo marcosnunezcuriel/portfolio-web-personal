@@ -1,0 +1,74 @@
+[
+  {
+    "id": "html5",
+    "title": "HTML5",
+    "platform": "Udemy",
+    "year": "2025",
+    "color": "red",
+    "certificateUrl": "public/studies/certificado-curso-html-y-css.pdf"
+  },
+  {
+    "id": "css3",
+    "title": "CSS3",
+    "platform": "Udemy",
+    "year": "2025",
+    "color": "blue",
+    "certificateUrl": "public/studies/certificado-curso-html-y-css.pdf"
+  },
+  {
+    "id": "javascript",
+    "title": "JavaScript",
+    "platform": "Udemy",
+    "year": "2026",
+    "color": "yellow",
+    "certificateUrl": "public/studies/certificado-curso-javaScript.pdf"
+  },
+  {
+    "id": "typescript",
+    "title": "TypeScript",
+    "platform": "Udemy",
+    "year": "2026",
+    "color": "blue",
+    "certificateUrl": ""
+  },
+  {
+    "id": "react",
+    "title": "React",
+    "platform": "Udemy",
+    "year": "2026",
+    "color": "blue",
+    "certificateUrl": ""
+  },
+  {
+    "id": "sql",
+    "title": "SQL",
+    "platform": "Udemy",
+    "year": "2026",
+    "color": "green",
+    "certificateUrl": ""
+  },
+  {
+    "id": "spring-boot",
+    "title": "SpringBoot",
+    "platform": "Udemy",
+    "year": "2026",
+    "color": "yellow",
+    "certificateUrl": ""
+  },
+  {
+    "id": "angular",
+    "title": "Angular",
+    "platform": "Udemy",
+    "year": "2026",
+    "color": "red",
+    "certificateUrl": ""
+  },
+  {
+    "id": "astro",
+    "title": "Astro",
+    "platform": "Udemy",
+    "year": "2026",
+    "color": "yellow",
+    "certificateUrl": ""
+  }
+]
