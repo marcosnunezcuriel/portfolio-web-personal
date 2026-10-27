@@ -2,8 +2,8 @@
 import { getRootColourVariables } from '../utils/colours.js';
 import { getRootFontVariables } from '../utils/fonts.js';
 const rootVars = {
-  ...getRootColourVariables(),
-  ...getRootFontVariables()
+	...getRootColourVariables(),
+	...getRootFontVariables()
 };
 ---
 
@@ -23,6 +23,8 @@ const rootVars = {
 </html>
 
 <style is:global define:vars={rootVars}>
+	@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 	body {
 		background-color: var(--normal-bg);
 		color: var(--white-text);

@@ -1,7 +1,3 @@
-export const FONT_URLS = {
-    pressStart: 'https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'
-};
-
 export const FONTS = {
     montserrat: "'Montserrat', sans-serif",
     inter: "'Inter', system-ui, sans-serif",
