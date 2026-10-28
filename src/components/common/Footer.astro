@@ -1,0 +1,36 @@
+---
+const currentYear = new Date().getFullYear();
+
+---
+
+<footer class="footer">
+    <img src="src/assets/logo-mnc.png" alt="logo-mnc" class="logo" />
+    <span>© {currentYear} • Marcos Núñez Curiel • Web Developer • Sevilla, Andalucía, España</span>
+    <span>Mi Portfolio</span>
+</footer>
+
+<style>
+
+    .footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 1.5rem 10%;
+        background-color: var(--dark-bg);
+    }
+
+    .logo {
+        height: 40px;
+        display: block;
+    }
+
+    .footer span {
+        font-family: var(--font-inter);
+        color: var(--grey-text);
+        font-size: 1rem;
+        font-weight: 200;
+    }
+
+</style>
