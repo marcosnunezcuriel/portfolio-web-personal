@@ -1,0 +1,25 @@
+---
+import SectionTitle from "../common/SectionTitle.astro";
+
+import CertificationCard from "../cards/CertificationCard.astro";
+
+import certificationsData from '../../data/certifications.json';
+---
+
+<section id="certifications" class="certifications">
+    <SectionTitle number = "03", title="Certificaciones"/>
+
+    <div class="certifications">
+        {certificationsData.map((certification) => (
+            <div class="card">
+                <CertificationCard
+                    title={certification.title}
+                    platform={certification.platform}
+                    year={certification.year}
+                    certificateURL={certification.certificateUrl}
+                    color={certification.color}
+                />
+            </div>
+        ))}
+    </div>
+</section>

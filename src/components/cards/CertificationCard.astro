@@ -1,0 +1,27 @@
+---
+interface Props {
+    title: string;
+    platform: string;
+    year: string;
+    certificateURL: string;
+    color: string; // 'yellow', 'red', 'green', 'blue'
+}
+
+const { title, platform, year, certificateURL, color } = Astro.props;
+---
+
+<a
+    href={certificateURL}
+    target="_blank"
+    class="card"
+    style={`--card-color: var(--color-${color}); --bg-grey-color: var(--color-${color}-bg);`}
+>
+    <div class="content">
+        <div class="diamond">◆</div>
+        <div class="info">
+            <p class="title">{title}</p>
+            <p class="subtitle">{platform} · {year}</p>
+        </div>
+    </div>
+    <span class="arrow">↗</span>
+</a>
