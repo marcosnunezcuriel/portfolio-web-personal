@@ -1,0 +1,28 @@
+---
+interface Props {
+  variant: string; // 'full' (80%), 'short' (60%)
+}
+
+const { variant } = Astro.props;
+---
+
+<hr class={`separator ${variant}`} />
+
+<style>
+
+    .separator {
+        border: none;
+        height: 1px;
+        background-color: var(--light-bg);
+        margin: 2.5rem auto;
+    }
+
+    .full {
+        width: 80vw;
+    }
+
+    .short {
+        width: 60vw;
+    }
+
+</style>
