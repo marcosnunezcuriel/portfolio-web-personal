@@ -10,7 +10,7 @@ const { number, title } = Astro.props;
 <div class="section-title">
     <span class="number">{number}</span>
     <h2 class="name">{title}</h2>
-    <div class="linea-decorativa" />
+    <hr class="linea-decorativa" />
 </div>
 
 <style>
@@ -39,6 +39,7 @@ const { number, title } = Astro.props;
 
     .linea-decorativa {
         flex: 1;
+        border: none;
         height: 2px;
         background-color: var(--color-yellow);
     }
