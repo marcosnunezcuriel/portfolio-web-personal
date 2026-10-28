@@ -48,7 +48,7 @@
         letter-spacing: 0.3px;
         padding-bottom: 4px;
         border-bottom: 2px solid transparent;
-        transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
     }
 
     .sections a:hover {
@@ -67,64 +67,66 @@
 </style>
 
 <script>
+
     document.addEventListener("DOMContentLoaded", () => {
-    const navLinks = document.querySelectorAll(".sections a");
-    const header = document.querySelector(".menu") as HTMLElement | null;
+        const navLinks = document.querySelectorAll(".sections a");
+        const header = document.querySelector(".menu") as HTMLElement | null;
 
-    if (!header) return; // Aseguramos que el header exista
+        if (!header) return;
 
-    // 1. Manejo del click para scroll suave
-    navLinks.forEach(link => {
-        link.addEventListener("click", (e) => {
-            e.preventDefault();
+        // Manejo del click para scroll suave
+        navLinks.forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute("href");
+                if (!targetId) return;
+
+                const targetSection = document.querySelector(targetId) as HTMLElement | null;
+
+                if (targetSection) {
+                    const headerHeight = header.offsetHeight;
+                    const elementPosition = targetSection.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+
+        // IntersectionObserver para resaltar la sección activa
+        const observerOptions = {
+            root: null,
+            rootMargin: `-${header.offsetHeight}px 0px -50% 0px`,
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute("id");
+                    
+                    navLinks.forEach(link => {
+                        link.classList.remove("active");
+                        if (link.getAttribute("href") === `#${id}`) {
+                            link.classList.add("active");
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        navLinks.forEach(link => {
             const targetId = link.getAttribute("href");
             if (!targetId) return;
-
-            const targetSection = document.querySelector(targetId) as HTMLElement | null;
-
-            if (targetSection) {
-                const headerHeight = header.offsetHeight;
-                const elementPosition = targetSection.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth"
-                });
+            
+            const section = document.querySelector(targetId);
+            if (section) {
+                observer.observe(section);
             }
         });
     });
 
-    // 2. IntersectionObserver para resaltar la sección activa
-    const observerOptions = {
-        root: null,
-        rootMargin: `-${header.offsetHeight}px 0px -50% 0px`,
-        threshold: 0
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const id = entry.target.getAttribute("id");
-                
-                navLinks.forEach(link => {
-                    link.classList.remove("active");
-                    if (link.getAttribute("href") === `#${id}`) {
-                        link.classList.add("active");
-                    }
-                });
-            }
-        });
-    }, observerOptions);
-
-    navLinks.forEach(link => {
-        const targetId = link.getAttribute("href");
-        if (!targetId) return;
-        
-        const section = document.querySelector(targetId);
-        if (section) {
-            observer.observe(section);
-        }
-    });
-});
 </script>

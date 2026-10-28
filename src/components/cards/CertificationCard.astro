@@ -25,3 +25,67 @@ const { title, platform, year, certificateURL, color } = Astro.props;
     </div>
     <span class="arrow">↗</span>
 </a>
+
+<style>
+
+    .card {
+        text-decoration: none;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        background-color: var(--light-bg);
+        color: var(--white-text);
+        border: 1px solid var(--card-color);
+        border-radius: 12px;
+        padding: 1.25rem 1.5rem;
+        font-family: var(--font-inter);
+        transition: all 0.3s ease;
+    }
+
+    .content {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .diamond {
+        color: var(--card-color);
+        font-size: 1.25rem;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .title {
+        margin: 0;
+        font-size: 1.25rem;
+    }
+
+    .subtitle {
+        margin: 0;
+        color: var(--grey-text);
+        font-size: 0.9rem;
+    }
+
+    .arrow {
+        position: relative;
+        top: -5px;
+        color: var(--light-bg);
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    /* Hover */
+    .card:hover {
+        background-color: var(--bg-grey-color);
+        border: 1px solid var(--dark-bg);
+    }
+
+    .card:hover .diamond, .card:hover .title, .card:hover .subtitle {
+        color: var(--light-bg);
+    }
+
+</style>

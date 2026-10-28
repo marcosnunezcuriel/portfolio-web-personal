@@ -9,17 +9,30 @@ import certificationsData from '../../data/certifications.json';
 <section id="certifications" class="certifications">
     <SectionTitle number = "03", title="Certificaciones"/>
 
-    <div class="certifications">
+    <div class="content">
         {certificationsData.map((certification) => (
-            <div class="card">
-                <CertificationCard
-                    title={certification.title}
-                    platform={certification.platform}
-                    year={certification.year}
-                    certificateURL={certification.certificateUrl}
-                    color={certification.color}
-                />
-            </div>
+            <CertificationCard
+                title={certification.title}
+                platform={certification.platform}
+                year={certification.year}
+                certificateURL={certification.certificateUrl}
+                color={certification.color}
+            />
         ))}
     </div>
 </section>
+
+<style>
+
+    .certifications {
+        margin: 0 10%;
+        padding: 1rem 0;
+    }
+
+    .content {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+</style>

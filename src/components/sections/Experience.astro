@@ -11,15 +11,13 @@ import jobsData from '../../data/jobs.json';
 
     <div class="jobs">
         {jobsData.map((job) => (
-            <div class="card">
-                <JobCard
-                    role={job.role}
-                    company={job.company}
-                    date={job.date}
-                    description={job.description}
-                    color={job.color}
-                />
-            </div>
+            <JobCard
+                role={job.role}
+                company={job.company}
+                date={job.date}
+                description={job.description}
+                color={job.color}
+            />
         ))}
     </div>
 </section>
