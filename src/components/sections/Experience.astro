@@ -1,0 +1,24 @@
+---
+import SectionTitle from "../common/SectionTitle.astro";
+
+import jobsData from '../../data/jobs.json';
+import JobCard from "../cards/JobCard.astro";
+---
+
+<section id="experience" class="experience">
+    <SectionTitle number = "02", title="Experiencia"/>
+
+    <div class="jobs">
+        {jobsData.map((job) => (
+            <div class="card">
+                <JobCard
+                    role={job.role}
+                    company={job.company}
+                    date={job.date}
+                    description={job.description}
+                    color={job.color}
+                />
+            </div>
+        ))}
+    </div>
+</section>
