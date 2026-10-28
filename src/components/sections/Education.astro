@@ -1,10 +1,25 @@
 ---
 import SectionTitle from "../common/SectionTitle.astro";
 
+import StudyCard from "../cards/StudyCard.astro";
+
+import studiesData from '../../data/studies.json';
 ---
 
 <section id="education" class="education">
     <SectionTitle number = "05" title="Educación"/>
+
+    <div class="studies">
+        {studiesData.map((study) => (
+            <StudyCard
+                title={study.title}
+                date={study.date}
+                institution={study.institution}
+                location={study.location}
+                color={study.color}
+            />
+        ))}
+    </div>
 
 </section>
 

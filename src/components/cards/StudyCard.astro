@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  date: string;
+  institution: string;
+  location: string;
+  color: string; // yellow, red, green, blue
+}
+
+const { title, date, institution, location, color } = Astro.props;
+---
+
+<div class="card" style={`--card-color: var(--color-${color});`}>
+    <div class="top-content">
+        <span class="date">{date}</span>
+        <h3 class="title">{title}</h3>
+    </div>
+    <div class="footer-info">
+        <p class="institution">{institution}</p>
+        <p class="location">📍 {location}</p>
+    </div>
+</div>
