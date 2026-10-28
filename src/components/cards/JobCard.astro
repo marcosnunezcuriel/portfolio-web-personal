@@ -1,10 +1,10 @@
 ---
 interface Props {
-  role: string;
-  company: string;
-  date: string;
-  description: string;
-  color: string; // yellow, red, green, blue
+    role: string;
+    company: string;
+    date: string;
+    description: string;
+    color: string; // yellow, red, green, blue
 }
 
 const { role, company, date, description, color } = Astro.props;
@@ -26,3 +26,69 @@ const { role, company, date, description, color } = Astro.props;
         <p class="description">{description}</p>
     </div>
 </article>
+
+<style>
+
+    .card {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    /* Línea del tiempo */
+    .timeline-indicator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        background-color: var(--card-color);
+        border-radius: 50%;
+        margin-top: 0.35rem;
+    }
+
+    .line {
+        width: 2px;
+        flex: 1; 
+        background: linear-gradient(
+            to bottom,
+            var(--white-text) 0%,
+            var(--grey-text) 50%,
+            var(--normal-bg) 100%
+        );
+    }
+
+    /* Content */
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .role {
+        margin: 0;
+        font-family: var(--font-montserrat);
+        font-weight: 700;
+    }
+
+    .company {
+        font-family: var(--font-inter);
+        color: var(--card-color);
+        font-style: italic;
+        font-weight: 500;
+    }
+
+    .date {
+        font-family: var(--font-inter);
+        color: var(--grey-text);;
+        font-weight: 300;
+    }
+
+    .description {
+        width: 60%;
+        font-family: var(--font-inter);
+        font-weight: 300;
+    }
+
+</style>
