@@ -1,0 +1,28 @@
+---
+interface Props {
+  role: string;
+  company: string;
+  date: string;
+  description: string;
+  color: string; // yellow, red, green, blue
+}
+
+const { role, company, date, description, color } = Astro.props;
+---
+
+<article class="card" style={`--card-color: var(--color-${color});`}>
+    <div class="timeline-indicator">
+        <div class="dot" />
+        <div class="line" />
+    </div>
+    <div class="content">
+        <header class="header">
+            <div class="titles">
+                <h3 class="role">{role}</h3>
+                <p class="company">{company}</p>
+            </div>
+            <span class="date">{date}</span>
+        </header>
+        <p class="description">{description}</p>
+    </div>
+</article>
