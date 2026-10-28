@@ -15,8 +15,57 @@ const { title, date, institution, location, color } = Astro.props;
         <span class="date">{date}</span>
         <h3 class="title">{title}</h3>
     </div>
-    <div class="footer-info">
-        <p class="institution">{institution}</p>
+    <div class="bottom-content">
+        <p class="institution">🏫 {institution}</p>
         <p class="location">📍 {location}</p>
     </div>
 </div>
+
+<style>
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 3rem;
+        padding: 2rem 2.5rem;
+        background-color: var(--light-bg);
+        border: 1px solid var(--card-color);
+        border-radius: 12px;
+    }
+
+    .top-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .date {
+        color: var(--card-color);
+        font-family: var(--font-inter);
+        font-size: 0.9rem;
+        font-weight: 700;
+    }
+
+    .title {
+        white-space: pre-line;
+        font-family: var(--font-montserrat);
+        font-size: 1.25rem;
+        font-weight: 800;
+    }
+
+    .bottom-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+        color: var(--grey-text);
+        font-family: var(--font-inter);
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    .date, .title, .institution, .location {
+        margin: 0;
+    }
+
+</style>
