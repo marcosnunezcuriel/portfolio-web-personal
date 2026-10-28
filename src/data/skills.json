@@ -45,7 +45,7 @@
     "skills": [
       {
         "id": "springboot",
-        "name": "SpringBoot",
+        "name": "Spring-boot",
         "icon": "/src/assets/skills/icono-springboot.png",
         "color": "green"
       },

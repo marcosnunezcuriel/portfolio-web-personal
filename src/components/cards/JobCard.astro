@@ -23,7 +23,7 @@ const { role, company, date, description, color } = Astro.props;
             </div>
             <span class="date">{date}</span>
         </header>
-        <p class="description">{description}</p>
+        <p class="description" set:html={description} />
     </div>
 </article>
 
@@ -89,6 +89,11 @@ const { role, company, date, description, color } = Astro.props;
         width: 60%;
         font-family: var(--font-inter);
         font-weight: 300;
+    }
+
+    .description :global(.highlight) {
+        color: var(--card-color);
+        font-style: italic;
     }
 
 </style>
