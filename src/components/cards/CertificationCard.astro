@@ -76,6 +76,8 @@ const { title, platform, year, certificateURL, color } = Astro.props;
         color: var(--light-bg);
         font-size: 1.5rem;
         font-weight: 700;
+        opacity: 0;
+        transition: all 0.25s ease-in-out;
     }
 
     /* Hover */
@@ -86,6 +88,10 @@ const { title, platform, year, certificateURL, color } = Astro.props;
 
     .card:hover .diamond, .card:hover .title, .card:hover .subtitle {
         color: var(--light-bg);
+    }
+
+    .card:hover .arrow {
+        opacity: 1;
     }
 
 </style>
