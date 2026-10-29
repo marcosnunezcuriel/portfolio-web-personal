@@ -4,9 +4,11 @@ import Separator from "../common/Separator.astro";
 
 import StudyCard from "../cards/StudyCard.astro";
 import LanguageCard from "../cards/LanguageCard.astro";
+import SkillCard from "../cards/SkillCard.astro";
 
 import studiesData from '../../data/studies.json';
 import languagesData from '../../data/languages.json';
+import skillsData from '../../data/skills.json';
 ---
 
 <section id="education" class="education">
@@ -34,6 +36,23 @@ import languagesData from '../../data/languages.json';
                 flag={language.flag}
                 color={language.color}
             />
+        ))}
+    </div>
+
+    <Separator variant='short' />
+
+    <div class="skills">
+        {skillsData.map((skillsGroup) => (
+            <h4>{skillsGroup.category}</h4>
+            <div class="skills-group">
+                {skillsGroup.skills.map((skill) => (
+                    <SkillCard
+                        name={skill.name}
+                        icon={skill.icon}
+                        color={skill.color}
+                    />
+                ))}
+            </div>
         ))}
     </div>
 

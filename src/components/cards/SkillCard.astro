@@ -1,0 +1,16 @@
+---
+interface Props {
+  name: string;
+  icon: string;
+  color: string; // yellow, red, green, blue
+}
+
+const { name, icon, color } = Astro.props;
+---
+
+<div class="card" style={`--card-color: var(--color-${color});`}>
+    <div class="icon-container">
+        <img src={icon} alt={name} class="icon" />
+    </div>
+    <span class="name">{name}</span>
+</div>
