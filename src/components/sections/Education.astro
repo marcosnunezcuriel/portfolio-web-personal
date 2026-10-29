@@ -43,7 +43,7 @@ import skillsData from '../../data/skills.json';
 
     <div class="skills">
         {skillsData.map((skillsGroup) => (
-            <h4>{skillsGroup.category}</h4>
+            <h4 class="skill-category">{skillsGroup.category}</h4>
             <div class="skills-group">
                 {skillsGroup.skills.map((skill) => (
                     <SkillCard
@@ -69,6 +69,22 @@ import skillsData from '../../data/skills.json';
     .languages {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .skill-category {
+        font-family: var(--font-montserrat);
+    }
+
+    .skills-group {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
         gap: 2rem;
     }
 

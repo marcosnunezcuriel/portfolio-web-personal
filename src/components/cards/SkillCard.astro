@@ -14,3 +14,58 @@ const { name, icon, color } = Astro.props;
     </div>
     <span class="name">{name}</span>
 </div>
+
+<style>
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        padding: 15px;
+        background-color: var(--light-bg);
+        border: 2px solid var(--card-color);
+        border-radius: 50%;
+        transition: all 0.25s ease-in-out;
+    }
+
+    .card:hover .icon-container {
+        box-shadow: 0 0 12px var(--white-text);
+    }
+
+    .icon {
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+        opacity: 0.8;
+        transition: all 0.25s ease-in-out;
+    }
+
+    .card:hover .icon {
+        opacity: 1;
+    }
+
+    .name {
+        padding: 0.25rem 0.75rem;
+        background-color: var(--light-bg);
+        font-family: var(--font-inter);
+        font-size: 0.9rem;
+        font-weight: 700;
+        border: 2px solid var(--card-color);
+        border-radius: 50px;
+        transform: translateY(-15px);
+        transition: all 0.25s ease-in-out;
+    }
+
+    .card:hover .name {
+        box-shadow: 0 0 12px var(--white-text);
+    }
+
+</style>
