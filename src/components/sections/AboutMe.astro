@@ -136,3 +136,27 @@ import SectionTitle from "../common/SectionTitle.astro";
     }
 
 </style>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const contactButton = document.querySelector(".contact-button");
+
+        contactButton?.addEventListener("click", (e) => {
+            e.preventDefault();
+            
+            const targetId = contactButton.getAttribute("href");
+            if (!targetId) return;
+
+            const targetSection = document.querySelector(targetId);
+
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+        });
+    });
+
+</script>
