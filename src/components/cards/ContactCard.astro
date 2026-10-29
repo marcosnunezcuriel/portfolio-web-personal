@@ -3,7 +3,7 @@
 ---
 
 <div id="card" class="card">
-    <div class="card-side card-front">
+    <div class="card-front">
         <div class="shapes">
             <span class="shape green-shape" />
             <span class="shape red-shape" />
@@ -12,31 +12,31 @@
         </div>
         <div class="main-info">
             <h3 class="name">
-                <span class="surname">Núñez Curiel</span>
-                <span class="firstname">Marcos</span>
+                <span>Núñez Curiel</span>
+                <span>Marcos</span>
             </h3>
-            <p class="role">&lt;WEB DEVELOPER /&gt;</p>
+            <span class="role">&lt;WEB DEVELOPER /&gt;</span>
         </div>
         <ul class="contact-list">
             <li>
                 <img src="src/assets/iconos-contacto/icono-telefono.png" alt="icono-telefono">
-                <p>+34 656 64 95 16</p>
+                <span>+34 656 64 95 16</span>
             </li>
             <li>
                 <img src="src/assets/iconos-contacto/icono-gmail.png" alt="icono-gmail">
-                <p>marcosnunezcuriel@gmail.com</p>
+                <span>marcosnunezcuriel@gmail.com</span>
             </li>
             <li>
                 <img src="src/assets/iconos-contacto/icono-linkedin.png" alt="icono-gmail">
-                <p>www.linkedin.com/in/marcos-nunez-curiel</p>
+                <span>www.linkedin.com/in/marcos-nunez-curiel</span>
             </li>
             <li>
                 <img src="src/assets/iconos-contacto/icono-github.png" alt="icono-github">
-                <p>https://github.com/marcosnunezcuriel</p>
+                <span>https://github.com/marcosnunezcuriel</span>
             </li>
         </ul>
     </div>
-    <div class="card-side card-back">
+    <div class="card-back">
         <div class="shapes">
             <span class="shape green-shape" />
             <span class="shape red-shape" />
@@ -44,11 +44,154 @@
             <span class="shape yelow-shape" />
         </div>
         <div class="back-content">
-            <p class="heading">Abierto a</p>
-            <p class="highlight red">nuevas oportunidades</p>
-            <p class="highlight yellow">colaboraciones</p>
-            <p class="highlight blue">proyectos interesantes</p>
-            <p class="highlight green">nuevos retos</p>
+            <span class="heading">Abierto a</span>
+            <span class="highlight red">nuevas oportunidades</span>
+            <span class="highlight yellow">colaboraciones</span>
+            <span class="highlight blue">proyectos interesantes</span>
+            <span class="highlight green">nuevos retos</span>
         </div>
     </div>
 </div>
+
+<style>
+
+    .card {
+        width: 440px;
+        height: 260px;
+        background-color: var(--white-text);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Formas */
+    .shape {
+        position: absolute;
+    }
+
+    .green-shape {
+        top: -60px;
+        left: -60px;
+        width: 120px;
+        height: 120px;
+        transform: rotate(45deg);
+        background-color: var(--color-green);
+    }
+
+    .red-shape {
+        top: -130px;
+        right: -130px;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        background-color: var(--color-red);
+    }
+
+    .blue-shape {
+        bottom: -90px;
+        left: -90px;
+        width: 180px;
+        height: 180px;
+        transform: rotate(45deg);
+        background-color: var(--color-blue);
+    }
+
+    .yelow-shape {
+        bottom: -65px;
+        right: -65px;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        background-color: var(--color-yellow);
+    }
+
+    /* Cara frontal */
+    .main-info {
+        position: absolute;
+        top: 40px;
+        left: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .name {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        color: var(--dark-bg);
+        font-family: var(--font-montserrat);
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .role {
+        color: var(--grey-text);
+        font-style: italic;
+    }
+
+    .contact-list {
+        list-style: none;
+        position: absolute;
+        left: 150px;
+        bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0;
+        color: var(--dark-bg);
+        font-family: var(--font-inter);
+        font-size: 0.75rem;
+    }
+
+    .contact-list li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .contact-list img {
+        width: 18px;
+        height: 18px;
+        object-fit: contain;
+    }
+
+    .contact-list span {
+        font-family: var(--font-inter);
+        font-size: 0.75rem;
+        font-weight: 300;
+    }
+
+    /* Cara trasera */
+    .card-back {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+
+    .back-content {
+        position: absolute;
+        top: 75px;
+        right: 75px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        font-family: var(--font-inter);
+        font-size: 0.9rem;
+    }
+
+    .heading {
+        color: var(--dark-bg);
+        font-weight: 500;
+    }
+
+    .highlight {
+        font-weight: 700;
+    }
+
+    .red    { color: var(--color-red); }
+    .yellow { color: var(--color-yellow); }
+    .blue   { color: var(--color-blue); }
+    .green  { color: var(--color-green); }
+
+    /* Efecto giro */
+
+</style>
