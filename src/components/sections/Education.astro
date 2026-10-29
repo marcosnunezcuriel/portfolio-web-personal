@@ -1,9 +1,12 @@
 ---
 import SectionTitle from "../common/SectionTitle.astro";
+import Separator from "../common/Separator.astro";
 
 import StudyCard from "../cards/StudyCard.astro";
+import LanguageCard from "../cards/LanguageCard.astro";
 
 import studiesData from '../../data/studies.json';
+import languagesData from '../../data/languages.json';
 ---
 
 <section id="education" class="education">
@@ -17,6 +20,19 @@ import studiesData from '../../data/studies.json';
                 institution={study.institution}
                 location={study.location}
                 color={study.color}
+            />
+        ))}
+    </div>
+
+    <Separator variant='short' />
+
+    <div class="languages">
+        {languagesData.map((language) => (
+            <LanguageCard
+                language={language.language}
+                level={language.level}
+                flag={language.flag}
+                color={language.color}
             />
         ))}
     </div>

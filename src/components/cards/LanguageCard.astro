@@ -1,0 +1,18 @@
+---
+interface Props {
+  language: string;
+  level: string;
+  flag: string;
+  color: string; // yellow, red, green, blue
+}
+
+const { language, level, flag, color } = Astro.props;
+---
+
+<div class="card" style={`--card-color: var(--color-${color});`}>
+    <img src={flag} alt={`Bandera de ${language}`} class="flag" />
+    <div class="content">
+        <span class="level">{level}</span>
+        <h3 class="name">{language}</h3>
+    </div>
+</div>
