@@ -37,6 +37,18 @@
         "name": "SQL",
         "icon": "/src/assets/skills/icono-sql.png",
         "color": "green"
+      },
+      {
+        "id": "json",
+        "name": "JSON",
+        "icon": "/src/assets/skills/icono-json.png",
+        "color": "blue"
+      },
+      {
+        "id": "xml",
+        "name": "XML",
+        "icon": "/src/assets/skills/icono-xml.png",
+        "color": "yellow"
       }
     ]
   },
