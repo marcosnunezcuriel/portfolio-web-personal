@@ -3,11 +3,15 @@ import SectionTitle from "../common/SectionTitle.astro";
 
 import CertificationCard from "../cards/CertificationCard.astro";
 
-import certificationsData from '../../data/certifications.json';
+const currentLanguage = Astro.currentLocale || 'es';
+const isEnglish = currentLanguage === 'en';
+
+const certificationsModule = currentLanguage === 'en' ? await import('../../data/en/certifications.json') : await import('../../data/es/certifications.json');
+const certificationsData = certificationsModule.default;
 ---
 
 <section id="certifications" class="certifications">
-    <SectionTitle number = "03" title="Certificaciones"/>
+    <SectionTitle number = "03" title={isEnglish ? "Certifications" : "Certificaciones"} />
 
     <div class="content">
         {certificationsData.map((certification) => (

@@ -1,0 +1,68 @@
+---
+const currentPath = Astro.url.pathname;
+const isEnglish = currentPath.startsWith('/en');
+
+const targetPath = isEnglish 
+  ? currentPath.replace(/^\/en/, '') || '/' 
+  : `/en${currentPath === '/' ? '' : currentPath}`;
+---
+
+<div class="language-picker">
+    {isEnglish ?
+        (
+            <a href={targetPath} class="language-button spanish">
+                <span>ES</span>
+            </a>
+        ) : (
+            <a href={targetPath} class="language-button english">
+                <span>EN</span>
+            </a>
+        )
+    }
+</div>
+
+<style>
+    .language-picker {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        z-index: 1000;
+    }
+
+    .language-button {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-family: var(--font-inter);
+        font-size: 0.9rem;
+        font-weight: 600;
+        background: var(--dark-bg);
+        transition: backallground 0.25s ease-in-out;
+    }
+
+    .language-button:hover {
+        background: var(--light-bg);
+        transform: scale(1.05);
+    }
+
+    .spanish {
+        border: 1px solid var(--color-red);
+    }
+
+    .spanish span {
+        color: var(--color-red);
+    }
+
+    .english {
+        border: 1px solid var(--color-blue);
+    }
+
+    .english span {
+        color: var(--color-blue);
+    }
+
+</style>

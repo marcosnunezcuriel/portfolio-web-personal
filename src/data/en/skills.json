@@ -1,0 +1,152 @@
+[
+  {
+    "category": "Programming & Markup Languages",
+    "emoji": "💻",
+    "skills": [
+      {
+        "id": "java",
+        "name": "Java",
+        "icon": "/src/assets/skills/icono-java.png",
+        "color": "blue"
+      },
+      {
+        "id": "html5",
+        "name": "HTML5",
+        "icon": "/src/assets/skills/icono-html5.png",
+        "color": "red"
+      },
+      {
+        "id": "css3",
+        "name": "CSS3",
+        "icon": "/src/assets/skills/icono-css3.png",
+        "color": "blue"
+      },
+      {
+        "id": "javascript",
+        "name": "JavaScript",
+        "icon": "/src/assets/skills/icono-javascript.png",
+        "color": "yellow"
+      },
+      {
+        "id": "typescript",
+        "name": "TypeScript",
+        "icon": "/src/assets/skills/icono-typescript.png",
+        "color": "blue"
+      },
+      {
+        "id": "sql",
+        "name": "SQL",
+        "icon": "/src/assets/skills/icono-sql.png",
+        "color": "green"
+      },
+      {
+        "id": "json",
+        "name": "JSON",
+        "icon": "/src/assets/skills/icono-json.png",
+        "color": "blue"
+      },
+      {
+        "id": "xml",
+        "name": "XML",
+        "icon": "/src/assets/skills/icono-xml.png",
+        "color": "yellow"
+      }
+    ]
+  },
+  {
+    "category": "Frameworks",
+    "emoji": "🚀",
+    "skills": [
+      {
+        "id": "springboot",
+        "name": "Spring-boot",
+        "icon": "/src/assets/skills/icono-springboot.png",
+        "color": "green"
+      },
+      {
+        "id": "angular",
+        "name": "Angular",
+        "icon": "/src/assets/skills/icono-angular.png",
+        "color": "red"
+      },
+      {
+        "id": "react",
+        "name": "React",
+        "icon": "/src/assets/skills/icono-react.png",
+        "color": "blue"
+      },
+      {
+        "id": "astro",
+        "name": "Astro",
+        "icon": "/src/assets/skills/icono-astro.png",
+        "color": "yellow"
+      }
+    ]
+  },
+  {
+    "category": "Databases",
+    "emoji": "🗄️",
+    "skills": [
+      {
+        "id": "mysql",
+        "name": "MySQL",
+        "icon": "/src/assets/skills/icono-mysql.png",
+        "color": "blue"
+      }
+    ]
+  },
+  {
+    "category": "Design & Prototyping",
+    "emoji": "🎨",
+    "skills": [
+      {
+        "id": "figma",
+        "name": "Figma",
+        "icon": "/src/assets/skills/icono-figma.png",
+        "color": "green"
+      }
+    ]
+  },
+  {
+    "category": "Tools & IDEs",
+    "emoji": "🛠️",
+    "skills": [
+      {
+        "id": "git",
+        "name": "Git",
+        "icon": "/src/assets/skills/icono-git.png",
+        "color": "red"
+      },
+      {
+        "id": "github",
+        "name": "GitHub",
+        "icon": "/src/assets/skills/icono-github.png",
+        "color": "yellow"
+      },
+      {
+        "id": "git-bash",
+        "name": "Git Bash",
+        "icon": "/src/assets/skills/icono-git-bash.png",
+        "color": "green"
+      },
+      {
+        "id": "intellij-idea",
+        "name": "IntelliJ IDEA",
+        "icon": "/src/assets/skills/icono-intellij-idea.png",
+        "color": "yellow"
+      },
+      {
+        "id": "eclipse",
+        "name": "Eclipse",
+        "icon": "/src/assets/skills/icono-eclipse.png",
+        "color": "red"
+      },
+      {
+        "id": "vs-code",
+        "name": "VS Code",
+        "icon": "/src/assets/skills/icono-vs-code.png",
+        "color": "blue"
+      }
+    ]
+  }
+]

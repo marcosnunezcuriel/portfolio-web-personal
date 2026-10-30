@@ -1,10 +1,23 @@
 ---
 import SectionTitle from "../common/SectionTitle.astro";
 
+const currentLanguage = Astro.currentLocale || 'es';
+const isEnglish = currentLanguage === 'en';
+
+const about = {
+    title: isEnglish ? "About me" : "Sobre mí",
+    description: isEnglish 
+        ? "I am a proactive, organized, and responsible person with good interpersonal skills. I am always fully committed and ready to give my best in my work."
+        : "Soy una persona proactiva, organizada y responsable, con buenas relaciones interpersonal. Siempre tengo la mejor disposición para la realización de mi trabajo.",
+    contactButton: isEnglish ? "Contact me" : "Contáctame",
+    cvButton: isEnglish ? "My Resume" : "Mi curriculum",
+    cvUrl: isEnglish ? "public/cv/cv-en.pdf" : "public/cv/cv-es.pdf",
+    cvFilename: isEnglish ? "Marcos_Nunez_Curiel_Resume.pdf" : "Marcos_Núñez_Curiel_CV.pdf"
+};
 ---
 
 <section id="about-me" class="about-me">
-    <SectionTitle number = "01" title="Sobre mí"/>
+    <SectionTitle number = "01" title={about.title}/>
 
     <div class="content">
         <div class="text">
@@ -12,20 +25,20 @@ import SectionTitle from "../common/SectionTitle.astro";
                 <span class="surname">Núñez Curiel</span>
                 <span class="firstname">Marcos</span>
             </h2>
-            <p class="description">Soy una persona proactiva, organizada y responsable, con buenas relaciones interpersonales. Siempre tengo la mejor disposición para la realización de mi trabajo.</p>
+            <p class="description">{about.description}</p>
             <div class="buttons">
                 <a
                     href="#contact"
                     class="contact-button"
                 >
-                    Contáctame
+                    {about.contactButton}
                 </a>
                 <a
-                    href="public/cv/mi-cv.pdf"
-                    download="Marcos_Núñez_Curiel_CV.pdf"
+                    href={about.cvUrl}
+                    download={about.cvFilename}
                     class="cv-button"
                 >
-                    Mi curriculum
+                    {about.cvButton}
                     <img src="src/assets/icono-descargar.png" alt="icono-descargar" />
                 </a>
             </div>

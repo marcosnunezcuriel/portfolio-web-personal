@@ -4,7 +4,7 @@
     "role": "Prácticas formativas 1º DAW",
     "company": "Soltel Group",
     "date": "05/2026",
-    "description": "Durante el periodo de prácticas, adquirí experiencia en arquitectura monolítica y de microservicios, desarrollo web full-stack utilizando <span class=\"highlight\">Angular</span> en frontend y <span class=\"highlight\">Spring-boot</span> en backend, además de pruebas de APIs con <span class=\"highlight\">Postman</span> y conexión a bases de datos. Asimismo, trabajé con contenerización de aplicaciones mediante <span class=\"highlight\">Docker</span> y <span class=\"highlight\">Portainer</span>, desarrollo móvil multiplataforma con <span class=\"highlight\">Flutter/Dart</span> y control de versiones con <span class=\"highlight\">Git</span>, <span class=\"highlight\">Git Bash</span> y <span class=\"highlight\">GitHub</span>.",
+    "description": "Durante el periodo de prácticas, adquirí experiencia en arquitectura monolítica y de microservicios, desarrollo web full-stack utilizando <span class=\"highlight\">Angular</span> en frontend y <span class=\"highlight\">Spring Boot</span> en backend, además de pruebas de APIs con <span class=\"highlight\">Postman</span> y conexión a bases de datos. Asimismo, trabajé con contenerización de aplicaciones mediante <span class=\"highlight\">Docker</span> y <span class=\"highlight\">Portainer</span>, desarrollo móvil multiplataforma con <span class=\"highlight\">Flutter/Dart</span> y control de versiones con <span class=\"highlight\">Git</span>, <span class=\"highlight\">Git Bash</span> y <span class=\"highlight\">GitHub</span>.",
     "color": "red"
   },
   {

@@ -1,5 +1,15 @@
 ---
+const currentLanguage = Astro.currentLocale || 'es';
+const isEnglish = currentLanguage === 'en';
 
+const contactCard = {
+    role: isEnglish ? "Web developer" : "Desarrollador Web",
+    heading: isEnglish ? "Open to" : "Abierto a",
+    highlightRed: isEnglish ? "new opportunities" : "nuevas oportunidades",
+    highlightYellow: isEnglish ? "collaborations" : "colaboraciones",
+    highlightBlue: isEnglish ? "interesting projects" : "proyectos interesantes",
+    highlightGreen: isEnglish ? "new challenges" : "nuevos retos"
+};
 ---
 
 <div id="card" class="card">
@@ -15,7 +25,7 @@
                 <span>Núñez Curiel</span>
                 <span>Marcos</span>
             </h3>
-            <span class="role">&lt;WEB DEVELOPER /&gt;</span>
+            <span class="role">&lt;{contactCard.role} /&gt;</span>
         </div>
         <ul class="contact-list">
             <li>
@@ -38,11 +48,11 @@
     </div>
     <div class="card-back">
         <div class="back-content">
-            <span class="heading">Abierto a</span>
-            <span class="highlight red">nuevas oportunidades</span>
-            <span class="highlight yellow">colaboraciones</span>
-            <span class="highlight blue">proyectos interesantes</span>
-            <span class="highlight green">nuevos retos</span>
+            <span class="heading">{contactCard.heading}</span>
+            <span class="highlight red">{contactCard.highlightRed}</span>
+            <span class="highlight yellow">{contactCard.highlightYellow}</span>
+            <span class="highlight blue">{contactCard.highlightBlue}</span>
+            <span class="highlight green">{contactCard.highlightGreen}</span>
         </div>
     </div>
 </div>
@@ -122,6 +132,7 @@
     .role {
         color: var(--grey-text);
         font-style: italic;
+        text-transform: uppercase;
     }
 
     .contact-list {

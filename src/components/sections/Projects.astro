@@ -1,10 +1,13 @@
 ---
 import SectionTitle from "../common/SectionTitle.astro";
 
+const currentLanguage = Astro.currentLocale || 'es';
+const isEnglish = currentLanguage === 'en';
+
 ---
 
 <section id="projects" class="projects">
-    <SectionTitle number = "04" title="Proyectos"/>
+    <SectionTitle number = "04" title={isEnglish ? "Projects" : "Proyectos"} />
 
 </section>
 

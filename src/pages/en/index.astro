@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+import Separator from '../../components/common/Separator.astro';
+import LanguagePicker from "../../components/common/LanguagePicker.astro";
+
+import Menu from '../../components/common/Menu.astro';
+import AboutMe from '../../components/sections/AboutMe.astro';
+import Experience from '../../components/sections/Experience.astro';
+import Certifications from '../../components/sections/Certifications.astro';
+import Projects from '../../components/sections/Projects.astro';
+import Education from '../../components/sections/Education.astro';
+import Contact from '../../components/sections/Contact.astro';
+import Footer from '../../components/common/Footer.astro';
+---
+
+<Layout>
+	<Menu />
+	<LanguagePicker />
+
+	<AboutMe />
+	<Separator variant='full' />
+
+	<Experience />
+	<Separator variant='full' />
+
+	<Certifications />
+	<Separator variant='full' />
+
+	<Projects />
+	<Separator variant='full' />
+
+	<Education />
+	<Separator variant='full' />
+
+	<Contact />
+
+	<Footer />
+</Layout>

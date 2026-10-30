@@ -6,13 +6,21 @@ import StudyCard from "../cards/StudyCard.astro";
 import LanguageCard from "../cards/LanguageCard.astro";
 import SkillCard from "../cards/SkillCard.astro";
 
-import studiesData from '../../data/studies.json';
-import languagesData from '../../data/languages.json';
-import skillsData from '../../data/skills.json';
+const currentLanguage = Astro.currentLocale || 'es';
+const isEnglish = currentLanguage === 'en';
+
+const studiesModule = currentLanguage === 'en' ? await import('../../data/en/studies.json') : await import('../../data/es/studies.json');
+const studiesData = studiesModule.default;
+
+const languagesModule = currentLanguage === 'en' ? await import('../../data/en/languages.json') : await import('../../data/es/languages.json');
+const languagesData = languagesModule.default;
+
+const skillsModule = currentLanguage === 'en' ? await import('../../data/en/skills.json') : await import('../../data/es/skills.json');
+const skillsData = skillsModule.default;
 ---
 
 <section id="education" class="education">
-    <SectionTitle number = "05" title="Educación"/>
+    <SectionTitle number = "05" title={isEnglish ? "Education" : "Educación"} />
 
     <div class="studies">
         {studiesData.map((study) => (

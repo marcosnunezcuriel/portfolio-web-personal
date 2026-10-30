@@ -3,11 +3,15 @@ import SectionTitle from "../common/SectionTitle.astro";
 
 import JobCard from "../cards/JobCard.astro";
 
-import jobsData from '../../data/jobs.json';
+const currentLanguage = Astro.currentLocale || 'es';
+const isEnglish = currentLanguage === 'en';
+
+const jobsModule = currentLanguage === 'en' ? await import('../../data/en/jobs.json') : await import('../../data/es/jobs.json');
+const jobsData = jobsModule.default;
 ---
 
 <section id="experience" class="experience">
-    <SectionTitle number = "02" title="Experiencia"/>
+    <SectionTitle number = "02" title={isEnglish ? "Experience" : "Experiencia"} />
 
     <div class="jobs">
         {jobsData.map((job) => (

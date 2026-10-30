@@ -2,12 +2,20 @@
 import SectionTitle from '../common/SectionTitle.astro';
 import ContactCard from '../common/ContactCard.astro';
 
+const currentLanguage = Astro.currentLocale || 'es';
+const isEnglish = currentLanguage === 'en';
+
+const contact = {
+    title: isEnglish ? "Contact" : "Contacto",
+    text: isEnglish ? "Let's work together" : "Trabajemos juntos"
+};
+
 ---
 
 <section id="contact" class="contact">
-    <SectionTitle number = "06" title="Contacto"/>
+    <SectionTitle number = "06" title={contact.title} />
 
-    <h1>Trabajemos juntos</h1>
+    <h1>{contact.text}</h1>
 
     <ContactCard />
 </section>

@@ -1,17 +1,25 @@
 ---
-
+const currentLanguage = Astro.currentLocale || 'es';
+const isEnglish = currentLanguage === 'en';
+const sectionName = {
+    about: isEnglish ? "About me" : "Sobre mí",
+    experience: isEnglish ? "Experience" : "Experiencia",
+    certifications: isEnglish ? "Certifications" : "Certificaciones",
+    projects: isEnglish ? "Projects" : "Proyectos",
+    education: isEnglish ? "Education" : "Educación",
+    contact: isEnglish ? "Contact" : "Contacto"
+};
 ---
 
 <nav class="menu">
     <img src="src/assets/logo-mnc.png" alt="logo-mnc" class="logo" />
-
     <ul class="sections">
-        <li><a href="#about-me" class="active">Sobre mí</a></li>
-        <li><a href="#experience">Experiencia</a></li>
-        <li><a href="#certifications">Certificaciones</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#education">Educación</a></li>
-        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#about-me" class="active">{sectionName.about}</a></li>
+        <li><a href="#experience">{sectionName.experience}</a></li>
+        <li><a href="#certifications">{sectionName.certifications}</a></li>
+        <li><a href="#projects">{sectionName.projects}</a></li>
+        <li><a href="#education">{sectionName.education}</a></li>
+        <li><a href="#contact">{sectionName.contact}</a></li>
     </ul>
 </nav>
 

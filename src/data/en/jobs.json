@@ -1,0 +1,42 @@
+[
+  {
+    "id": "practicas-daw",
+    "role": "Web Development Internship · 1st year DAW",
+    "company": "Soltel Group",
+    "date": "05/2026",
+    "description": "During my work placement, I gained experience in monolithic and microservices architecture, full-stack web development using <span class=\"highlight\">Angular</span> on the front end and <span class=\"highlight\">Spring Boot</span> on the back end, as well as API testing with <span class=\"highlight\">Postman</span> and connecting to databases. I also worked on application containerisation using <span class=\"highlight\">Docker</span> and <span class=\"highlight\">Portainer</span>, cross-platform mobile development with <span class=\"highlight\">Flutter/Dart</span> and version control with <span class=\"highlight\">Git</span>, <span class=\"highlight\">Git Bash</span> and <span class=\"highlight\">GitHub</span>.",
+    "color": "red"
+  },
+  {
+    "id": "operario-lavadero",
+    "role": "Car wash attendant",
+    "company": "EasyWash",
+    "date": "09/2026 - Present",
+    "description": "Responsible for providing direct customer service, managing payments and the till, carrying out basic technical maintenance on the washing equipment, and ensuring the overall upkeep of the premises to guarantee the centre runs correctly.",
+    "color": "yellow"
+  },
+  {
+    "id": "operario-fabrica-almacen",
+    "role": "Factory worker / Production line assistant / Warehouse assistant",
+    "company": "Randstad Empleo Empresa de Trabajo Temporal",
+    "date": "06/2026 - Present",
+    "description": "I have experience in logistics, warehouse management and production lines in high-turnover industrial environments. I have worked for leading companies in various sectors, such as the food sector at <span class=\"highlight\">Hermanos Fernández López</span> and <span class=\"highlight\">Sadrym</span>, the household appliances sector at <span class=\"highlight\">Cointer</span>, the chemical sector at <span class=\"highlight\">Persán</span>, express parcel delivery at <span class=\"highlight\">MRW</span> and the pharmaceutical sector at <span class=\"highlight\">Becton Dickinson</span>. My duties have included the loading, unloading and handling of goods and raw materials, as well as the placement and sorting of stock on shelves. I have also been responsible for preparing shipments by repalletising, strapping, packing and securing loads to ensure safe transport. On the production line, I have worked on the assembly and packaging of structures and orders in accordance with customer specifications, carrying out visual quality control of the product and rigorously maintaining standards of hygiene, safety and tidiness in the work area.",
+    "color": "blue"
+  },
+  {
+    "id": "bodeguero",
+    "role": "Warehouse assistant",
+    "company": "Excelentísimo Ateneo de Sevilla",
+    "date": "Christmas Campaigns 2025 and 2026",
+    "description": "Responsible for the receipt, safekeeping and organisation of goods in the interior storage area of a float, the smooth and coordinated distribution of products during the parade, and stock control to ensure adequate supplies and the safety of the cargo during the <span class=\"highlight\">Three Kings' Parade</span>.",
+    "color": "red"
+  },
+  {
+    "id": "profesor-particular",
+    "role": "Private tutor",
+    "company": "Independent Educational Services",
+    "date": "2022 - 2025",
+    "description": "Responsible for delivering private tuition in <span class=\"highlight\">Mathematics</span>, <span class=\"highlight\">English</span> and <span class=\"highlight\">Physics</span> to pupils in Compulsory Secondary Education, with a personalised approach in small groups of one to three pupils to reinforce concepts, prepare for exams and monitor academic performance.",
+    "color": "green"
+  }
+]

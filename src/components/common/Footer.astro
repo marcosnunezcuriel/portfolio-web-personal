@@ -1,12 +1,21 @@
 ---
 const currentYear = new Date().getFullYear();
 
+const currentLanguage = Astro.currentLocale || 'es';
+const isEnglish = currentLanguage === 'en';
+
+const footer = {
+    role: isEnglish ? "Web Developer" : "Desarrollador web",
+    location: isEnglish ? "Seville, Andalusia, Spain" : "Sevilla, Andalucía, España",
+    projectName: isEnglish ? "My Portfolio" : "Mi portfolio"
+};
+
 ---
 
 <footer class="footer">
     <img src="src/assets/logo-mnc.png" alt="logo-mnc" class="logo" />
-    <span>© {currentYear} • Marcos Núñez Curiel • Web Developer • Sevilla, Andalucía, España</span>
-    <span>Mi Portfolio</span>
+    <span>© {currentYear} • Marcos Núñez Curiel • {footer.role} • {footer.location}</span>
+    <span>{footer.projectName}</span>
 </footer>
 
 <style>
