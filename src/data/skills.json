@@ -1,6 +1,7 @@
 [
   {
     "category": "Lenguajes de programación y marcado",
+    "emoji": "💻",
     "skills": [
       {
         "id": "java",
@@ -54,6 +55,7 @@
   },
   {
     "category": "Frameworks",
+    "emoji": "🚀",
     "skills": [
       {
         "id": "springboot",
@@ -83,6 +85,7 @@
   },
   {
     "category": "Bases de datos",
+    "emoji": "🗄️",
     "skills": [
       {
         "id": "mysql",
@@ -94,6 +97,7 @@
   },
   {
     "category": "Diseño & Prototipado",
+    "emoji": "🎨",
     "skills": [
       {
         "id": "figma",
@@ -105,6 +109,7 @@
   },
   {
     "category": "Herramientas & IDEs",
+    "emoji": "🛠️",
     "skills": [
       {
         "id": "git",

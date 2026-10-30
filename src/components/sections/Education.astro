@@ -43,7 +43,7 @@ import skillsData from '../../data/skills.json';
 
     <div class="skills">
         {skillsData.map((skillsGroup) => (
-            <h4 class="skill-category">{skillsGroup.category}</h4>
+            <h4 class="skill-category">{skillsGroup.emoji} {skillsGroup.category}</h4>
             <div class="skills-group">
                 {skillsGroup.skills.map((skill) => (
                     <SkillCard
