@@ -16,6 +16,10 @@ export const BG_COLORS = {
     dark: '#18191C'
 };
 
+export const ERROR_COLORS = {
+    error: '#00FF41'
+}
+
 export function getRootColourVariables() {
     return {
         // Colores de acento y sus tonos hover
@@ -35,6 +39,9 @@ export function getRootColourVariables() {
         // Colores de fondo
         'light-bg': BG_COLORS.light,
         'normal-bg': BG_COLORS.normal,
-        'dark-bg': BG_COLORS.dark
+        'dark-bg': BG_COLORS.dark,
+
+        // Color de error
+        'error': ERROR_COLORS.error
     };
 }
