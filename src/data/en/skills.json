@@ -58,6 +58,12 @@
     "emoji": "🚀",
     "skills": [
       {
+        "id": "tailwind-css",
+        "name": "Tailwind-CSS",
+        "icon": "/src/assets/skills/icono-tailwind-css.png",
+        "color": "blue"
+      },
+      {
         "id": "springboot",
         "name": "Spring-boot",
         "icon": "/src/assets/skills/icono-springboot.png",

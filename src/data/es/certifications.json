@@ -5,7 +5,7 @@
     "platform": "Udemy",
     "year": "2025",
     "color": "red",
-    "certificateUrl": "public/studies/certificado-curso-html-y-css.pdf"
+    "certificateUrl": "public/certifications/certificado-curso-html-y-css.pdf"
   },
   {
     "id": "css3",
@@ -13,7 +13,7 @@
     "platform": "Udemy",
     "year": "2025",
     "color": "blue",
-    "certificateUrl": "public/studies/certificado-curso-html-y-css.pdf"
+    "certificateUrl": "public/certifications/certificado-curso-html-y-css.pdf"
   },
   {
     "id": "javascript",
@@ -21,11 +21,19 @@
     "platform": "Udemy",
     "year": "2026",
     "color": "yellow",
-    "certificateUrl": "public/studies/certificado-curso-javascript.pdf"
+    "certificateUrl": "public/certifications/certificado-curso-javascript.pdf"
   },
   {
     "id": "typescript",
     "title": "TypeScript",
+    "platform": "Udemy",
+    "year": "2026",
+    "color": "blue",
+    "certificateUrl": ""
+  },
+  {
+    "id": "tailwind-css",
+    "title": "Tailwind-CSS",
     "platform": "Udemy",
     "year": "2026",
     "color": "blue",
