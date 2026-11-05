@@ -16,6 +16,7 @@ Este documento proporciona una visión general y técnica de la arquitectura, co
   * Gestión de datos centralizada a través de archivos JSON.
   * Estilos unificados mediante utilidades globales para colores y fuentes.
   * Soporte para descarga de currículum en PDF (según el idioma activo) y previsualización de certificaciones.
+  * Página 404 personalizada y bilingüe con detección automática de idioma y botón de retorno al inicio adaptado.
 
 ---
 
@@ -95,6 +96,7 @@ La organización del proyecto sigue una arquitectura clara por responsabilidades
     ├── layouts/          # Envoltorios de diseño con estilos globales
     │   └── Layout.jsx
     ├── pages/            # Puntos de entrada principales (Enrutado multiidioma)
+    │   ├── 404.astro     # Página de error personalizada bilingüe
     │   ├── index.astro   # Punto de entrada de la versión en español
     │   └── en/
     │       └── index.astro # Punto de entrada de la versión en inglés
@@ -122,7 +124,10 @@ La organización del proyecto sigue una arquitectura clara por responsabilidades
 * **SkillCard:** Muestra las competencias técnicas.
 * **StudyCard:** Muestra los títulos académicos.
 
-### 4.3. Configuración y Estilos (`utils/`)
+### 4.3. Páginas especiales (`pages`)
+* 404.astro: Página de error personalizada que detecta de manera dinámica si el usuario navega desde la versión en inglés o español para mostrar los textos localizados, la fotografía de perfil y un botón de redirección inteligente al inicio correspondiente.
+
+### 4.4. Configuración y Estilos (`utils/`)
 * **`colours.js`:** Contiene las variables con la paleta cromática centralizada de la aplicación para asegurar coherencia visual.
 * **`fonts.js`:** Define los estilos tipográficos y fuentes utilizadas en todos los componentes.
 

@@ -16,6 +16,7 @@ This document provides an overview and technical breakdown of the architecture, 
   * Centralized data management via JSON files.
   * Unified styles using global utilities for colors and fonts.
   * Support for downloading the resume in PDF format (depending on the active language) and previewing certifications.
+  * A customised, bilingual 404 page with automatic language detection and an adapted ‘Back to Home’ button.
 
 ---
 
@@ -95,6 +96,7 @@ The project organization follows a clear architecture based on responsibilities:
     ├── layouts/          # Layout wrappers with global styles
     │   └── Layout.jsx
     ├── pages/            # Main entry points (Multi-language routing)
+    │   ├── 404.astro     # Bilingual custom error page
     │   ├── index.astro   # Spanish version entry point
     │   └── en/
     │       └── index.astro # English version entry point
@@ -122,7 +124,10 @@ The project organization follows a clear architecture based on responsibilities:
 * **SkillCard:** Displays technical competencies.
 * **StudyCard:** Displays academic degrees.
 
-### 4.3. Configuration and Styles (`utils/`)
+### 4.3. Special pages (`pages`)
+* 404.astro: A customised error page that dynamically detects whether the user is browsing the English or Spanish version, in order to display localised text, the profile photograph and a smart redirect button to the relevant home page.
+
+### 4.4. Configuration and Styles (`utils/`)
 * **`colours.js`:** Contains variables with the centralized color palette of the application to ensure visual consistency.
 * **`fonts.js`:** Defines typographic styles and fonts used across all components.
 
