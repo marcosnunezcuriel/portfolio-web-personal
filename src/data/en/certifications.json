@@ -5,7 +5,7 @@
     "platform": "Udemy",
     "year": "2025",
     "color": "red",
-    "certificateUrl": "public/certifications/certificado-curso-html-y-css.pdf"
+    "certificateUrl": "/portfolio-web-personal/certifications/certificado-curso-html-y-css.pdf"
   },
   {
     "id": "css3",
@@ -13,7 +13,7 @@
     "platform": "Udemy",
     "year": "2025",
     "color": "blue",
-    "certificateUrl": "public/certifications/certificado-curso-html-y-css.pdf"
+    "certificateUrl": "/portfolio-web-personal/certifications/certificado-curso-html-y-css.pdf"
   },
   {
     "id": "javascript",
@@ -21,7 +21,7 @@
     "platform": "Udemy",
     "year": "2026",
     "color": "yellow",
-    "certificateUrl": "public/certifications/certificado-curso-javascript.pdf"
+    "certificateUrl": "/portfolio-web-personal/certifications/certificado-curso-javascript.pdf"
   },
   {
     "id": "typescript",

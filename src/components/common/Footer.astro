@@ -5,7 +5,6 @@ const currentLanguage = Astro.currentLocale || 'es';
 const isEnglish = currentLanguage === 'en';
 
 const footer = {
-    logoURL : isEnglish ? "../../src/assets/logo-mnc.png" : "src/assets/logo-mnc.png",
     role: isEnglish ? "Web Developer" : "Desarrollador web",
     location: isEnglish ? "Seville, Andalusia, Spain" : "Sevilla, Andalucía, España",
     projectName: isEnglish ? "My Portfolio" : "Mi portfolio"
@@ -14,7 +13,7 @@ const footer = {
 ---
 
 <footer class="footer">
-    <img src={footer.logoURL} alt="logo-mnc" class="logo" />
+    <img src="/portfolio-web-personal/assets/logo-mnc.png" alt="logo-mnc" class="logo" />
     <span>© {currentYear} • Marcos Núñez Curiel • {footer.role} • {footer.location}</span>
     <span>{footer.projectName}</span>
 </footer>

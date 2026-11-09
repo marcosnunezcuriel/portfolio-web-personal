@@ -3,21 +3,21 @@
     "id": "es",
     "language": "Spanish",
     "level": "Native",
-    "flag": "/src/assets/flags/spain-flag.jpg",
+    "flag": "/portfolio-web-personal/assets/flags/spain-flag.jpg",
     "color": "red"
   },
   {
     "id": "en",
     "language": "English",
     "level": "B2 · Cambridge",
-    "flag": "/src/assets/flags/uk-flag.jpg",
+    "flag": "/portfolio-web-personal/assets/flags/uk-flag.jpg",
     "color": "blue"
   },
   {
     "id": "it",
     "language": "Italian",
     "level": "Basic",
-    "flag": "/src/assets/flags/italy-flag.jpg",
+    "flag": "/portfolio-web-personal/assets/flags/italy-flag.jpg",
     "color": "green"
   }
 ]

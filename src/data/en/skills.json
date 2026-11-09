@@ -6,49 +6,49 @@
       {
         "id": "java",
         "name": "Java",
-        "icon": "/src/assets/skills/java-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/java-icon.png",
         "color": "blue"
       },
       {
         "id": "html5",
         "name": "HTML5",
-        "icon": "/src/assets/skills/html5-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/html5-icon.png",
         "color": "red"
       },
       {
         "id": "css3",
         "name": "CSS3",
-        "icon": "/src/assets/skills/css3-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/css3-icon.png",
         "color": "blue"
       },
       {
         "id": "javascript",
         "name": "JavaScript",
-        "icon": "/src/assets/skills/javascript-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/javascript-icon.png",
         "color": "yellow"
       },
       {
         "id": "typescript",
         "name": "TypeScript",
-        "icon": "/src/assets/skills/typescript-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/typescript-icon.png",
         "color": "blue"
       },
       {
         "id": "sql",
         "name": "SQL",
-        "icon": "/src/assets/skills/sql-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/sql-icon.png",
         "color": "green"
       },
       {
         "id": "json",
         "name": "JSON",
-        "icon": "/src/assets/skills/json-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/json-icon.png",
         "color": "blue"
       },
       {
         "id": "xml",
         "name": "XML",
-        "icon": "/src/assets/skills/xml-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/xml-icon.png",
         "color": "yellow"
       }
     ]
@@ -60,31 +60,31 @@
       {
         "id": "tailwind-css",
         "name": "Tailwind-CSS",
-        "icon": "/src/assets/skills/tailwind-css-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/tailwind-css-icon.png",
         "color": "blue"
       },
       {
         "id": "springboot",
         "name": "Spring-boot",
-        "icon": "/src/assets/skills/springboot-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/springboot-icon.png",
         "color": "green"
       },
       {
         "id": "angular",
         "name": "Angular",
-        "icon": "/src/assets/skills/angular-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/angular-icon.png",
         "color": "red"
       },
       {
         "id": "react",
         "name": "React",
-        "icon": "/src/assets/skills/react-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/react-icon.png",
         "color": "blue"
       },
       {
         "id": "astro",
         "name": "Astro",
-        "icon": "/src/assets/skills/astro-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/astro-icon.png",
         "color": "yellow"
       }
     ]
@@ -96,7 +96,7 @@
       {
         "id": "mysql",
         "name": "MySQL",
-        "icon": "/src/assets/skills/mysql-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/mysql-icon.png",
         "color": "blue"
       }
     ]
@@ -108,7 +108,7 @@
       {
         "id": "figma",
         "name": "Figma",
-        "icon": "/src/assets/skills/figma-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/figma-icon.png",
         "color": "green"
       }
     ]
@@ -120,37 +120,37 @@
       {
         "id": "git",
         "name": "Git",
-        "icon": "/src/assets/skills/git-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/git-icon.png",
         "color": "red"
       },
       {
         "id": "github",
         "name": "GitHub",
-        "icon": "/src/assets/skills/github-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/github-icon.png",
         "color": "yellow"
       },
       {
         "id": "git-bash",
         "name": "Git Bash",
-        "icon": "/src/assets/skills/git-bash-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/git-bash-icon.png",
         "color": "green"
       },
       {
         "id": "intellij-idea",
         "name": "IntelliJ IDEA",
-        "icon": "/src/assets/skills/intellij-idea-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/intellij-idea-icon.png",
         "color": "yellow"
       },
       {
         "id": "eclipse",
         "name": "Eclipse",
-        "icon": "/src/assets/skills/eclipse-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/eclipse-icon.png",
         "color": "red"
       },
       {
         "id": "vs-code",
         "name": "VS Code",
-        "icon": "/src/assets/skills/vs-code-icon.png",
+        "icon": "/portfolio-web-personal/assets/skills/vs-code-icon.png",
         "color": "blue"
       }
     ]

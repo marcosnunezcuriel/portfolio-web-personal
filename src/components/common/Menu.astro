@@ -2,7 +2,6 @@
 const currentLanguage = Astro.currentLocale || 'es';
 const isEnglish = currentLanguage === 'en';
 const menu = {
-    logoURL : isEnglish ? "../../src/assets/logo-mnc.png" : "src/assets/logo-mnc.png",
     about: isEnglish ? "About me" : "Sobre mí",
     experience: isEnglish ? "Experience" : "Experiencia",
     certifications: isEnglish ? "Certifications" : "Certificaciones",
@@ -13,7 +12,7 @@ const menu = {
 ---
 
 <nav class="menu">
-    <img src={menu.logoURL} alt="logo-mnc" class="logo" />
+    <img src="/portfolio-web-personal/assets/logo-mnc.png" alt="logo-mnc" class="logo" />
     <ul class="sections">
         <li><a href="#about-me" class="active">{menu.about}</a></li>
         <li><a href="#experience">{menu.experience}</a></li>
