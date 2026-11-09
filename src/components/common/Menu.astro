@@ -1,18 +1,23 @@
 ---
-const currentLanguage = Astro.currentLocale || 'es';
-const isEnglish = currentLanguage === 'en';
+const currentLanguage = Astro.currentLocale || "es";
+const isEnglish = currentLanguage === "en";
 const menu = {
     about: isEnglish ? "About me" : "Sobre mí",
     experience: isEnglish ? "Experience" : "Experiencia",
     certifications: isEnglish ? "Certifications" : "Certificaciones",
     projects: isEnglish ? "Projects" : "Proyectos",
     education: isEnglish ? "Education" : "Educación",
-    contact: isEnglish ? "Contact" : "Contacto"
+    contact: isEnglish ? "Contact" : "Contacto",
 };
 ---
 
+
 <nav class="menu">
-    <img src="/portfolio-web-personal/assets/logo-mnc.png" alt="logo-mnc" class="logo" />
+    <img
+        src="/portfolio-web-personal/assets/logo-mnc.png"
+        alt="logo-mnc"
+        class="logo"
+    />
     <ul class="sections">
         <li><a href="#about-me" class="active">{menu.about}</a></li>
         <li><a href="#experience">{menu.experience}</a></li>
@@ -21,10 +26,11 @@ const menu = {
         <li><a href="#education">{menu.education}</a></li>
         <li><a href="#contact">{menu.contact}</a></li>
     </ul>
+    <div class="scroll-progress"></div>
 </nav>
 
-<style>
 
+<style>
     .menu {
         position: sticky;
         top: 0;
@@ -38,15 +44,18 @@ const menu = {
         z-index: 1000;
     }
 
+
     .logo {
         height: 45px;
     }
+
 
     .sections {
         display: flex;
         gap: 3rem;
         list-style: none;
     }
+
 
     .sections a {
         text-decoration: none;
@@ -60,64 +69,93 @@ const menu = {
         transition: all 0.25s ease-in-out;
     }
 
+
     .sections a:hover {
         color: var(--color-yellow);
         border-bottom: 2px solid var(--color-yellow);
     }
 
+
     .sections a.active {
         border-bottom: 2px solid var(--white-text);
     }
+
 
     .sections a.active:hover {
         border-bottom: 2px solid var(--color-yellow);
     }
 
+
+    .scroll-progress {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 0%;
+        background-color: var(--color-yellow);
+        transition: all 0.05s ease-out;
+        pointer-events: none;
+    }
+
+
 </style>
 
-<script>
 
+<script>
     document.addEventListener("DOMContentLoaded", () => {
-        const navLinks = document.querySelectorAll(".sections a");
         const header = document.querySelector(".menu") as HTMLElement | null;
+        const navLinks = document.querySelectorAll(".sections a");
+        const progressBar = document.querySelector(".scroll-progress") as HTMLElement | null;
+
 
         if (!header) return;
 
+
         // Manejo del click para scroll suave
-        navLinks.forEach(link => {
+        navLinks.forEach((link) => {
             link.addEventListener("click", (e) => {
                 e.preventDefault();
                 const targetId = link.getAttribute("href");
                 if (!targetId) return;
 
-                const targetSection = document.querySelector(targetId) as HTMLElement | null;
+
+                const targetSection = document.querySelector(
+                    targetId,
+                ) as HTMLElement | null;
+
 
                 if (targetSection) {
                     const headerHeight = header.offsetHeight;
-                    const elementPosition = targetSection.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+                    const elementPosition =
+                        targetSection.getBoundingClientRect().top;
+                    const offsetPosition =
+                        elementPosition + window.pageYOffset - headerHeight;
+
 
                     window.scrollTo({
                         top: offsetPosition,
-                        behavior: "smooth"
+                        behavior: "smooth",
                     });
                 }
             });
         });
 
+
         // IntersectionObserver para resaltar la sección activa
         const observerOptions = {
             root: null,
             rootMargin: `-${header.offsetHeight}px 0px -50% 0px`,
-            threshold: 0
+            threshold: 0,
         };
 
+
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
+            entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     const id = entry.target.getAttribute("id");
-                    
-                    navLinks.forEach(link => {
+
+
+                    navLinks.forEach((link) => {
                         link.classList.remove("active");
                         if (link.getAttribute("href") === `#${id}`) {
                             link.classList.add("active");
@@ -127,15 +165,27 @@ const menu = {
             });
         }, observerOptions);
 
-        navLinks.forEach(link => {
+
+        navLinks.forEach((link) => {
             const targetId = link.getAttribute("href");
             if (!targetId) return;
-            
+
+
             const section = document.querySelector(targetId);
             if (section) {
                 observer.observe(section);
             }
         });
-    });
 
+
+        // Manejo del scroll-bar
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+            if (progressBar) {
+                progressBar.style.width = `${progress}%`;
+            }
+        }, { passive: true });
+    });
 </script>
