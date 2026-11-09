@@ -1,33 +1,34 @@
 ---
-import Layout from "../layouts/Layout.astro"
-
-const currentPath = Astro.url.pathname;
-const isEnglish = currentPath.startsWith('/en');
-const notFound = {
-    imageURL: isEnglish ? "../src/assets/mi-foto.png" : "/src/assets/mi-foto.png",
-    heading: isEnglish ? "Oops! You got lost in the code." : "¡Vaya! Te has perdido en el código.",
-    description: isEnglish ? "It looks like the page you are looking for went out for coffee or never existed. Don't worry, you can head back home to keep exploring my portfolio!" : "Parece que la página que buscas se fue a tomar un café o nunca existió. ¡Pero no te preocupes, puedes volver al inicio para seguir explorando mi portfolio!",
-    buttonText: isEnglish ? "Back to Home" : "Volver al inicio",
-    homeUrl: isEnglish ? "/en" : "/"
-}
+import Layout from "../layouts/Layout.astro";
 ---
+
 
 <Layout>
     <main class="not-found">
         <div class="image-container">
-            <img src={notFound.imageURL} alt="mi-foto" class="profile-image">
+            <img
+                src="/portfolio-web-personal/assets/mi-foto.png"
+                alt="mi-foto"
+                class="profile-image"
+            />
         </div>
         <div class="content">
             <h1 class="error-code">404</h1>
-            <h2 class="heading">{notFound.heading}</h2>
-            <p class="description">{notFound.description}</p>
-            <a href={notFound.homeUrl} class="home-button">{notFound.buttonText}</a>
+            <h2 class="heading">¡Vaya! Te has perdido en el código.</h2>
+            <p class="description">
+                Parece que la página que buscas se fue a tomar un café o nunca
+                existió. ¡Pero no te preocupes, puedes volver al inicio para
+                seguir explorando mi portfolio!
+            </p>
+            <a href="/portfolio-web-personal/" class="home-button"
+                >Volver al inicio</a
+            >
         </div>
     </main>
 </Layout>
 
-<style>
 
+<style>
     .not-found {
         height: 100vh;
         display: flex;
@@ -36,6 +37,7 @@ const notFound = {
         gap: 50px;
     }
 
+
     .image-container {
         width: 280px;
         height: 340px;
@@ -43,15 +45,18 @@ const notFound = {
         overflow: hidden;
     }
 
+
     .image-container img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
+
     .content {
         text-align: center;
     }
+
 
     .error-code {
         color: var(--error);
@@ -60,11 +65,13 @@ const notFound = {
         font-weight: 800;
     }
 
+
     .heading {
         font-family: var(--font-inter);
         font-size: 1.5rem;
         font-weight: 700;
     }
+
 
     .description {
         max-width: 400px;
@@ -73,6 +80,7 @@ const notFound = {
         font-weight: 400;
     }
 
+
     .home-button {
         display: inline-flex;
         align-items: center;
@@ -80,7 +88,7 @@ const notFound = {
         color: var(--normal-bg);
         border: 1px solid transparent;
         border-radius: 50px;
-        padding: 0.75rem ;
+        padding: 0.75rem;
         font-family: var(--font-inter);
         font-size: 0.9rem;
         font-weight: 700;
@@ -88,11 +96,44 @@ const notFound = {
         background-color: var(--error);
     }
 
+
     .home-button:hover {
         background-color: var(--normal-bg);
         color: var(--error) !important;
         border: 1px solid var(--error) !important;
         box-shadow: 0 0 15px var(--white-text);
     }
-
 </style>
+
+
+<script>
+    const isEnglishRoute = window.location.pathname.startsWith(
+        "/portfolio-web-personal/en",
+    );
+
+
+    if (isEnglishRoute) {
+        const heading = document.querySelector(".heading");
+        const description = document.querySelector(".description");
+        const homeButton = document.querySelector(
+            ".home-button",
+        ) as HTMLAnchorElement | null;
+
+
+        if (heading) {
+            heading.textContent = "Oops! You got lost in the code.";
+        }
+
+
+        if (description) {
+            description.textContent =
+                "It looks like the page you are looking for went out for coffee or never existed. Don't worry, you can head back home to keep exploring my portfolio!";
+        }
+
+
+        if (homeButton) {
+            homeButton.textContent = "Back to Home";
+            homeButton.href = "/portfolio-web-personal/en/";
+        }
+    }
+</script>
