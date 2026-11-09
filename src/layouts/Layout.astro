@@ -1,39 +1,81 @@
 ---
-import { getRootColourVariables } from '../utils/colours.js';
-import { getRootFontVariables } from '../utils/fonts.js';
+import { getRootColourVariables } from "../utils/colours.js";
+import { getRootFontVariables } from "../utils/fonts.js";
 const rootVars = {
-	...getRootColourVariables(),
-	...getRootFontVariables()
+    ...getRootColourVariables(),
+    ...getRootFontVariables(),
 };
 ---
 
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/portfolio-web-personal/assets/logo-mnc.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>MNC - Portfolio</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/portfolio-web-personal/assets/logo-mnc.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <title>MNC - Portfolio</title>
+    </head>
+    <body>
+        <slot />
+    </body>
 </html>
 
+
 <style is:global define:vars={rootVars}>
-	@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-	body {
-		background-color: var(--normal-bg);
-		color: var(--white-text);
-		margin: 0;
-  	}
 
-	section {
-		margin: 0 10%;
+    @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+
+    body {
+        background-color: var(--normal-bg);
+        color: var(--white-text);
+        margin: 0;
+    }
+
+
+    section {
+        margin: 0 10%;
         padding: 1rem 0;
-	}
-	
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.9s ease-out;
+    }
+
+
+    section.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
 </style>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll("section");
+
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    } else {
+                        entry.target.classList.remove("visible");
+                    }
+                });
+            },
+            {
+                threshold: 0.15,
+            },
+        );
+
+
+        sections.forEach((section) => observer.observe(section));
+    });
+</script>
