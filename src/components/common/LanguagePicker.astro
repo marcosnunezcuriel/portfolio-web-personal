@@ -1,15 +1,18 @@
 ---
-const currentPath = Astro.url.pathname;
-const isEnglish = currentPath.startsWith('/en');
+const currentLanguage = Astro.currentLocale || "es";
+const isEnglish =
+    currentLanguage === "en" || Astro.url.pathname.includes("/en");
 
-const targetPath = isEnglish 
-  ? currentPath.replace(/^\/en/, '') || '/' 
-  : `/en${currentPath === '/' ? '' : currentPath}`;
+
+const targetPath = isEnglish
+    ? "/portfolio-web-personal/"
+    : "/portfolio-web-personal/en/";
 ---
 
+
 <div class="language-picker">
-    {isEnglish ?
-        (
+    {
+        isEnglish ? (
             <a href={targetPath} class="language-button spanish">
                 <span>ES</span>
             </a>
@@ -21,6 +24,7 @@ const targetPath = isEnglish
     }
 </div>
 
+
 <style>
     .language-picker {
         position: fixed;
@@ -28,6 +32,7 @@ const targetPath = isEnglish
         right: 40px;
         z-index: 1000;
     }
+
 
     .language-button {
         text-decoration: none;
@@ -44,25 +49,29 @@ const targetPath = isEnglish
         transition: backallground 0.25s ease-in-out;
     }
 
+
     .language-button:hover {
         background: var(--light-bg);
         transform: scale(1.05);
     }
 
+
     .spanish {
         border: 1px solid var(--color-red);
     }
+
 
     .spanish span {
         color: var(--color-red);
     }
 
+
     .english {
         border: 1px solid var(--color-blue);
     }
 
+
     .english span {
         color: var(--color-blue);
     }
-
 </style>
